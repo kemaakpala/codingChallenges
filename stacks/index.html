@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <p>
+        Implement a stack data structure in JavaScript that contains the
+        following operations:
+      </p>
+
+      <h2>Constructor</h2>
+      <p>
+        <code>Stack</code>Creates an instance of a Stack class that doesn't
+        contain any items. The constructor not accept any arguments.
+      </p>
+      <h2>Methods</h2>
+      <div>
+        <p>
+          <code>push</code>
+        </p>
+        Pushes an item onto the top of the stack.
+        <ul>
+          <li>Arguments {*} item: The item to be pushed onto the stack.</li>
+          <li>Returns {number}: The new length of the stack.</li>
+          <li>Time Complexity O(1)</li>
+        </ul>
+      </div>
+      <div>
+        <p><code>pop</code></p>
+        Remove an item at the top of the stack.
+        <ul>
+          <li>
+            Returns {*} item: The item at the top of the stack if it is not
+            empty, undefined otherwise.
+          </li>
+          <li>Time Complexity O(1)</li>
+        </ul>
+      </div>
+      <div>
+        <p><code>isEmpty</code></p>
+        Determines if the stack is empty.
+        <ul>
+          <li>
+            Returns {boolean}: true if the stack has no items, false otherwise.
+          </li>
+          <li>Time Complexity O(1)</li>
+        </ul>
+      </div>
+      <div>
+        <p><code>peek</code></p>
+        Returns the item at the top of the stack without removing it from the
+        stack.
+        <ul>
+          <li>
+            Returns {*}: The item at the top of the stack if it is not empty,
+            undefined otherwise.
+          </li>
+          <li>Time Complexity O(1)</li>
+        </ul>
+      </div>
+      <div>
+        <p><code>length</code></p>
+        Returns the number of items in the stack.
+        <ul>
+          <li>Returns {number}: The number of items in the stack.</li>
+          <li>Time Complexity O(1)</li>
+        </ul>
+      </div>
+      <h2>Examples</h2>
+      <code>
+        const stack = new Stack(); <br />
+        stack.isEmpty(); // true <br />
+        stack.push(1); <br />
+        stack.push(2); <br />
+        stack.length(); // 2 <br />
+        stack.push(3); <br />
+        stack.peek(); // 3 <br />
+        stack.pop(); // 3 <br />
+        stack.isEmpty(); // false <br />
+      </code>
+    </section>
+    <section>
+      <h2>Linked List-based Solution</h2>
+      <p>
+        Stacks can also be implemented with singly-linked lists which are
+        essentially a chain of connected nodes. To do that, we need to create a
+        Node class that has a prev pointer, a reference to the Node below if
+        it's not the bottom item of the stack.
+      </p>
+      <p>
+        push()-ing involves creating a new Node and pointing the current top of
+        the stack to that new Node's prev field and updating a reference to the
+        new top of the stack.
+      </p>
+      <p>
+        pop()-ing is the reverse where we find the prev node of the current top
+        and set it to be the new stop of the stack.
+      </p>
+      <p>
+        Since the time complexity of length() has to be O(1) and counting the
+        number of items in a linked list will take O(n), we need to separately
+        track the number of items in the list with a _length instance property
+        and update it within the push() and pop() methods.
+      </p>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>

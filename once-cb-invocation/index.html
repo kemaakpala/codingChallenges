@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Once</title>
+  </head>
+  <body>
+    <main>
+      <p>
+        Sometimes it's helpful to ensure a function runs only once during the
+        lifecycle of the website, e.g. for setting up logging, initializing an
+        environment, etc.
+      </p>
+
+      <p>
+        Implement a function that accepts a callback and restricts its
+        invocation to at most once. Subsequent calls of the function will return
+        the result of the first invocation of the callback function. The
+        callback function is invoked with the this binding and arguments of the
+        created function.
+      </p>
+      <h2>Examples</h2>
+      <code>
+        let i = 1; <br>
+        function incrementBy(value) { <br> 
+          i += value; return i; <br>
+        }<br>
+        const incrementByOnce = once(incrementBy);<br>
+        incrementByOnce(2); // i is now 3; The function returns 3. <br>
+        incrementByOnce(3); // i is still 3; The function returns the result of the first invocation, which is 3.<br>
+        i = 4; <br>
+        incrementByOnce(2); // i is still 4 as it is not modified. The function returns the result of the first invocation, which is 3. <br>
+      </code>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

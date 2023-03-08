@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h1>Array Questions</h1>
+    <section>
+      <h2>Array.prototype.square</h2>
+      <p>
+        Implement a custom Array function, Array.prototype.square() which
+        creates a new array with the results of squaring every element within
+        the array the .square() method is called on.
+      </p>
+      <h2>Examples:</h2>
+      <code>
+        [-2].square(); // [4] <br />
+        [1, 2, 3, 4].square(); // [1, 4, 9, 16] <br />
+      </code>
+      <h2>Notes</h2>
+      <ul>
+        <li>The original array should not be modified.</li>
+        <li>Assume that the array only contains numbers.</li>
+        <li>Assume that the array will not be sparse, e.g. [1, 2, , 4].</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Selection Sort</h2>
+      <p>
+        Implement a function that performs a selection sort. The function should
+        take in an array of integers and return an array with the integers
+        sorted in ascending order.
+      </p>
+      <img
+        src="./assets/selection-sort-input-output.png"
+        alt="selection sort single input expected output"
+      />
+      <h2>Examples:</h2>
+      <code>
+        selectionSort([9, 3, 6, 2, 1, 11]); // [1, 2, 3, 6, 9, 11] <br />
+        selectionSort([12, 16, 14, 1, 2, 3]); // [1, 2, 3, 12, 14, 16] <br />
+      </code>
+      <h2>Recap</h2>
+      <p>
+        Selection sort is a sorting algorithm that repeatedly scans an unsorted
+        array and with each iteration finds the minimum element to build up a
+        sorted array.
+      </p>
+      <p>Here is the basic idea behind selection sort:</p>
+      <ol>
+        <li>Find the minimum element in the array.</li>
+        <li>Swap it with the element at the first position.</li>
+        <li>Find the second minimum element in the array.</li>
+        <li>Swap it with the element at the second position.</li>
+        <li>Continue this process until the entire array is sorted.</li>
+      </ol>
+      <img
+        src="./assets/selection-sort-explanation.png"
+        alt="selection sort explanation"
+      />
+    </section>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
